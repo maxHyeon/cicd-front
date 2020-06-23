@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: lab23
+  name: frontend-lab23
+  labels:
+    app: frontend-lab23
+spec:
+  selector:
+    matchLabels:
+      app: frontend-lab23
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend-lab23
+    spec:
+      containers:
+        - name: frontend-lab23
+          image: maxhyeon/frontend-lab23:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
