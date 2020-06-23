@@ -63,7 +63,7 @@ podTemplate(label: label, cloud: "academycluster", containers: [
 				sh "kubectl apply -n ${namespace} -f ${deployment}"
 				sh "kubectl apply -n ${namespace} -f ${service}"
 				sh "kubectl set image deployment ${appname} ${containername}=${image}:${tag} -n ${namespace}"
-				sh "kubectl get svc -n devops"
+				sh "kubectl get svc -n lab23"
       		}
     	}
 
