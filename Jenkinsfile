@@ -1,5 +1,10 @@
 def label = "worker-${UUID.randomUUID().toString()}"
 
+def notifySlack(STATUS, COLOR) {
+    slackSend channel: '#lab23-jks', message: STATUS+" : " + "${env.JOB_NAME}[${env.BUILD_NUMBER}] (${env.BUILD_URL})", color: COLOR, tokenCredentialId: 'slack', teamDomain: 'ibm-teck'
+}
+
+
 podTemplate(label: label, cloud: "academycluster", containers: [
   containerTemplate(name: 'npm', image: 'node:lts', command: 'cat', ttyEnabled: true),
   containerTemplate(name: "scanner", image: "newtmitch/sonar-scanner", ttyEnabled: true, command: "cat"),
@@ -66,6 +71,8 @@ podTemplate(label: label, cloud: "academycluster", containers: [
 				sh "kubectl get svc -n lab23"
       		}
     	}
+
+		notifySlack("SUCCESS", "#00FF00")
 
 	} catch(e) {
 
