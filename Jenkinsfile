@@ -47,7 +47,7 @@ podTemplate(label: label, cloud: "academycluster", containers: [
 				sh "sonar-scanner \
 					-Dsonar.projectKey=frontend-lab23 \
 					-Dsonar.sources=. \
-					-Dsonar.host.url=ttp://169.56.75.38:31783 \
+					-Dsonar.host.url=http://169.56.75.38:31783 \
 					-Dsonar.login=lab23 "
 			}
 		}
