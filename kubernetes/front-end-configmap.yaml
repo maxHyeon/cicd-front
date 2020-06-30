@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lab23-frontend-config
+  namespace: lab23
+data:
+  ENDPOINT_URI: 169.56.75.34:30880

@@ -1,2 +1,2 @@
-const restUri = '{{ENDPOINT_URI}}';
+const restUri = process.env.ENDPOINT_URI;
 const productPrefix = 'products';
