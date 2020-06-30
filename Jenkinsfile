@@ -45,11 +45,10 @@ podTemplate(label: label, cloud: "academycluster", containers: [
 		stage('Static Code Analysis') {
 			container('scanner') {
 				sh "sonar-scanner \
-					-Dsonar.projectKey=${sonarQubeProject} \
+					-Dsonar.projectKey=frontend-lab23 \
 					-Dsonar.sources=. \
-					-Dsonar.host.url=${sonarQubeURL} \
-					-Dsonar.login=60464e819894dc41b45f3eca168784c1b7d76e55"
-
+					-Dsonar.host.url=ttp://169.56.75.38:31783 \
+					-Dsonar.login=lab23 "
 			}
 		}
 
