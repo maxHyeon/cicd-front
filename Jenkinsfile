@@ -14,7 +14,7 @@ podTemplate(label: label, cloud: "academycluster", containers: [
   node(label) {
 
 	try {
-
+    notifySlack("START", "#00FF00")
 		stage('scm') {
 			git credentialsId: 'post-academy-git-auth', url: 'https://github.com/maxHyeon/cicd-front.git', branch: 'master'
 	    }
