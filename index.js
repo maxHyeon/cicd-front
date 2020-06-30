@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const restUri = process.env.ENDPOINT_URI;
 
 // Add static
 app.use(express.static('public'));

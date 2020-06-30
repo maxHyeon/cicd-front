@@ -4,4 +4,4 @@ metadata:
   name: lab23-frontend-config
   namespace: lab23
 data:
-  ENDPOINT_URI: 169.56.75.34:30686
+  ENDPOINT_URI: 169.56.75.34:30686/api/v1

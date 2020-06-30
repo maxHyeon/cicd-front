@@ -7,7 +7,6 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "3.4.8",
-    "process": "latest",
-    "process-env": "latest"
+    "process": "latest"
   }
 }
