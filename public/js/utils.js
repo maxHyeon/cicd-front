@@ -20,7 +20,6 @@ Demo.Utils = (function() {
       if (status == 'error') {
         // var ss = xhr.status;
         // var st = xhr.statusText;
-        ;
       } else {
         $('#content').trigger('create');
 
