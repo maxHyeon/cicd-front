@@ -18,8 +18,9 @@ Demo.Utils = (function() {
   const changeContents = function(filename, callback) {
     $('#content').load(filename, function(response, status, xhr) {
       if (status == 'error') {
-        var ss = xhr.status;
-        var st = xhr.statusText;
+        // var ss = xhr.status;
+        // var st = xhr.statusText;
+        ;
       } else {
         $('#content').trigger('create');
 
